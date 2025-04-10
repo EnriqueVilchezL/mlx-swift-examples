@@ -125,7 +125,7 @@ let package = Package(
             ]
         ),
         .target(
-            name: "StableDiffusion",
+            name: "MLXStableDiffusion",
             dependencies: [
                 .product(name: "MLX", package: "mlx-swift"),
                 .product(name: "MLXNN", package: "mlx-swift"),
