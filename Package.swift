@@ -22,9 +22,6 @@ let package = Package(
         .library(
             name: "MLXEmbedders",
             targets: ["MLXEmbedders"]),
-        .library(
-            name: "MLXStableDiffusion",
-            targets: ["StableDiffusion"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ml-explore/mlx-swift", .upToNextMinor(from: "0.21.2")),
@@ -117,22 +114,6 @@ let package = Package(
                 .product(name: "Gzip", package: "GzipSwift"),
             ],
             path: "Libraries/MLXMNIST",
-            exclude: [
-                "README.md"
-            ],
-            swiftSettings: [
-                .enableExperimentalFeature("StrictConcurrency")
-            ]
-        ),
-        .target(
-            name: "MLXStableDiffusion",
-            dependencies: [
-                .product(name: "MLX", package: "mlx-swift"),
-                .product(name: "MLXNN", package: "mlx-swift"),
-                .product(name: "MLXRandom", package: "mlx-swift"),
-                .product(name: "Transformers", package: "swift-transformers"),
-            ],
-            path: "Libraries/StableDiffusion",
             exclude: [
                 "README.md"
             ],
