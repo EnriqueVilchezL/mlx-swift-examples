@@ -24,7 +24,7 @@ let package = Package(
             targets: ["MLXEmbedders"]),
         .library(
             name: "MLXStableDiffusion",
-            targets: ["MLXStableDiffusion"]),
+            targets: ["StableDiffusion"]),
     ],
     dependencies: [
         .package(url: "https://github.com/ml-explore/mlx-swift", .upToNextMinor(from: "0.21.2")),
